@@ -197,7 +197,9 @@ def StartUp():
         os.system(oscmd)
         botname = "stallmanbot.py"
         debug(oscmd)
-        oscmd = "diff -q %s %s/bin/%s" % (botname, HOME, botname)
+        # oscmd = "diff -q %s %s/bin/%s" % (botname, HOME, botname)
+        # For testing purposes, delete this line later
+        oscmd = "diff -q %s %s/homemadescripts/%s" % (botname, HOME, botname)
         res = os.system(oscmd)
         if res:
             # new version detected
